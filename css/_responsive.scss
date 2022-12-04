@@ -1,0 +1,49 @@
+@media only screen and (min-width:800px){
+main{
+    background: url(../images/bg-pattern-desktop.svg)  no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-template-columns:  repeat(5,1fr);
+    picture{
+        grid-column: 4/-1;
+        grid-row: 1;
+        img{
+            min-height: 107%;     
+        }
+    }
+    .logo{
+        img{
+            display: none;
+        }
+    }
+    .details{
+        padding: 80px 150px 50px;
+        text-align: left;
+        grid-row: 1;
+        grid-column: 1/4;
+        gap: 50px;
+        .log{
+            width: 200px;
+            display: block;
+        }
+        h1{
+            font-size: 5em;
+        }
+        p{
+            font-size: 1.3em;
+            line-height: 35px;
+        }
+        .btns{
+            button{
+                width: 100px;
+                &:hover{
+                    filter: brightness(1.2);
+                }
+            }
+            .err{
+                right: 120px;
+            }
+        }
+    }
+}
+}

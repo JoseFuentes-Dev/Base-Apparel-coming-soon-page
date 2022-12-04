@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .logo {
+  padding: 30px;
+}
+main .logo img {
+  width: 120px;
+}
+main picture img {
+  width: 100%;
+}
+main .details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  gap: 20px;
+}
+main .details .log {
+  display: none;
+}
+main .details h1 {
+  margin-top: 45px;
+  font-size: 3.5em;
+  letter-spacing: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main .details h1 span {
+  font-weight: 300;
+  color: var(--Desaturated-Red);
+}
+main .details p {
+  color: var(--Desaturated-Red);
+  line-height: 25px;
+  font-size: 1em;
+}
+main .details .btns {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+main .details .btns input {
+  width: 100%;
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 1em;
+  padding-left: 30px;
+}
+main .details .btns input:focus {
+  border: 2px solid var(--Desaturated-Red);
+  outline: none;
+}
+main .details .btns .err {
+  position: absolute;
+  bottom: 15px;
+  right: 90px;
+  transition: all 0.5 ease;
+  opacity: 0;
+}
+main .details .btns button {
+  position: absolute;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  padding: 20px;
+  width: 80px;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+  right: 0;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+main .details #emailOK {
+  color: var(--Soft-Red);
+  text-align: left;
+}
+main ::-moz-placeholder {
+  color: rgba(206, 151, 151, 0.6);
+}
+main :-ms-input-placeholder {
+  color: rgba(206, 151, 151, 0.6);
+}
+main ::placeholder {
+  color: rgba(206, 151, 151, 0.6);
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  main picture {
+    grid-column: 4/-1;
+    grid-row: 1;
+  }
+  main picture img {
+    min-height: 107%;
+  }
+  main .logo img {
+    display: none;
+  }
+  main .details {
+    padding: 80px 150px 50px;
+    text-align: left;
+    grid-row: 1;
+    grid-column: 1/4;
+    gap: 50px;
+  }
+  main .details .log {
+    width: 200px;
+    display: block;
+  }
+  main .details h1 {
+    font-size: 5em;
+  }
+  main .details p {
+    font-size: 1.3em;
+    line-height: 35px;
+  }
+  main .details .btns button {
+    width: 100px;
+  }
+  main .details .btns button:hover {
+    filter: brightness(1.2);
+  }
+  main .details .btns .err {
+    right: 120px;
+  }
+}/*# sourceMappingURL=main.css.map */

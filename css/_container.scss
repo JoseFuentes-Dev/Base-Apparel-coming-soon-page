@@ -1,0 +1,84 @@
+main{
+    display: flex;
+    flex-direction: column;
+ 
+    .logo{
+        padding: 30px;
+        img{
+            width: 120px;
+        }
+    }
+    picture{
+        img{
+            width: 100%;
+        }
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        gap: 20px;
+        .log{
+            display: none;
+        }
+        h1{
+            margin-top: 45px;
+            font-size: 3.5em;
+            letter-spacing:  10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            span{
+                font-weight: 300;
+                color: var(--Desaturated-Red);
+            }
+        }
+        p{
+            color: var(--Desaturated-Red);
+            line-height: 25px;
+            font-size: 1em;
+        }
+        .btns{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            input{ 
+                width: 100%;
+                border: 1px solid var(--Desaturated-Red);
+                border-radius: 30px;
+                padding: 20px;
+               font-size: 1em;
+               padding-left: 30px;
+
+               &:focus{
+                border: 2px solid var(--Desaturated-Red);
+                outline: none;
+               }
+            }
+            .err{
+                position: absolute;
+                bottom: 15px;
+                right: 90px;
+                transition: all .5 ease;
+                opacity: 0;
+            }
+            button{
+                position: absolute;
+                background:  linear-gradient(135deg,  hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+                padding: 20px;
+                width: 80px;
+                height: 100%;
+                border: none;
+                border-radius: 30px;
+                right: 0;
+                box-shadow:  3px 5px 10px rgba( #000,.2);
+            }
+        }
+        #emailOK{
+            color: var(--Soft-Red);
+           text-align: left;
+        }
+    }
+    ::placeholder { color: rgba(hsl(0, 36%, 70%), .6) ; }
+ }

@@ -119,7 +119,7 @@ main ::placeholder {
     grid-row: 1;
   }
   main picture img {
-    min-height: 107%;
+    min-height: 100%;
   }
   main .logo img {
     display: none;
